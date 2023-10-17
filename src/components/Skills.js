@@ -11,8 +11,8 @@ import tech6 from '../assets/img/tech-github.svg';
 import tech7 from '../assets/img/tech-flutter.svg';
 import tech8 from '../assets/img/tech-figma.svg';
 import tech9 from '../assets/img/tech-bootstrap.svg';
-import tech10 from '../assets/img/tech-quasar.svg';
-import tech11 from '../assets/img/tech-magento.svg';
+
+
 import tech12 from '../assets/img/tech-python.svg';
 
 
@@ -40,15 +40,15 @@ export const Skills = () => {
             imgUrl: tech3,
         },
 
-        {
-            title: "Quasar",
-            imgUrl: tech10,
-        },
+        // {
+        //     title: "Quasar",
+        //     imgUrl: tech10,
+        // },
 
-        {
-            title: "Magento",
-            imgUrl: tech11,
-        },
+        // {
+        //     title: "Magento",
+        //     imgUrl: tech11,
+        // },
 
         {
             title: "Python",
@@ -74,10 +74,10 @@ export const Skills = () => {
             imgUrl: tech8,
         },
 
-        {
-            title: "Github",
-            imgUrl: tech6,
-        },
+        // {
+        //     title: "Github",
+        //     imgUrl: tech6,
+        // },
 
     ];
 
@@ -125,11 +125,11 @@ export const Skills = () => {
                         <div className="skill-bx">
 
                             <div className="container" id="skill-bx-text">
-                                <h2>
+                                <h2 style={{ color: '#0658F6' }}>
                                     Technologies
                                 </h2>
+                                <p style={{ color: '#0658F6' }}>At Softdone, we develop in:</p>
 
-                                <p>Since I started my studies in systems engineering, I have tried different technologies, but at the moment some of them are the ones I have worked with and I have knowledge of.</p>
                             </div>
 
                             <Carousel responsive={responsive} infinite={true} className="skill-slider">

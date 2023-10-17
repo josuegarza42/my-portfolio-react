@@ -5,7 +5,7 @@ import { ArrowRightCircle } from 'react-bootstrap-icons';
 import headerImg from "../assets/img/Softdone test.png";
 
 
-export const Banner = () => {
+export const Contact = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ['Websites', 'Mobile apps', 'Web apps', 'E-commerce', 'Landing pages'];
@@ -43,7 +43,7 @@ export const Banner = () => {
     };
 
     return (
-        <section className="banner" id="home">
+        <section className="banner" id="contact">
             <Container>
                 <Row className="align-items-center">
                     <Col xs={12} md={12} xl={12}>
