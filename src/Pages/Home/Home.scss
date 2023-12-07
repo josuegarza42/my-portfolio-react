@@ -1,0 +1,150 @@
+.home {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 12px;
+  width: 100%;
+  flex: 1;
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    translate: -90px;
+    opacity: 0;
+    animation: animate 0.25s ease-out forwards;
+
+    @keyframes animate {
+      to {
+        translate: 0;
+        opacity: 1;
+      }
+    }
+
+    .intro {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1rem;
+      margin-left: 6px;
+    }
+
+    .name {
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+
+      // Este es el estilo para tu nombre completo
+      h1 {
+        font-size: 4rem; // Tamaño del nombre, ajústalo según tu preferencia
+        line-height: 1; // Para que el espaciado sea el adecuado
+        margin: 0; // Elimina márgenes por defecto
+        color: #292929; // Cambia al color que prefieras
+        font-weight: bold; // Si quieres que sea en negrita
+
+        &:not(:last-child) {
+          margin-bottom: 0.5rem; // Espaciado entre 'Josue' y 'Garza'
+        }
+      }
+
+      // Este es el estilo para el título 'FULL-STACK DEVELOPER'
+      .dev {
+        font-size: 1.5rem; // Tamaño del título, ajústalo según tu preferencia
+        font-weight: normal; // Si prefieres que no sea en negrita
+        color: #575757; // Cambia al color que prefieras
+        margin-top: 1rem; // Espaciado entre el nombre y el título
+
+        b {
+          font-weight: bold; // Peso de la fuente en negrita para 'DEVELOPER'
+          color: #a64ca6; // Aquí pones el color morado que prefieras para 'DEVELOPER'
+          // Si quieres un morado más brillante o más oscuro, ajusta el color como desees
+        }
+      }
+    }
+
+
+  }
+
+  .profile-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    aspect-ratio: 1;
+    background-color: #8d86b5;
+    border-radius: 30px;
+    border: 1px solid #7770a0;
+    overflow: hidden;
+    cursor: pointer;
+    filter: drop-shadow(10px 20px 15px rgba(0, 0, 0, 0.377));
+    translate: -100px;
+    opacity: 0;
+    animation: animate 0.4s ease-out 0.2s forwards;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.3s ease;
+    }
+
+    &:hover img {
+      scale: 1.02;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    flex-direction: column;
+    margin-top: 20px;
+
+    .details {
+      align-items: center;
+      margin-bottom: 10px;
+      gap: 10px;
+      transform: translateY(0px); // Ajustamos la posición de inicio
+
+      .intro {
+             margin-top: 10px;
+        font-family: 'Raleway', sans-serif;
+        font-size: 1rem;
+        margin-left: 6px;
+      }
+
+      .name {
+        flex-direction: column; // Apilamos los elementos verticalmente
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        width: 100%;
+
+        h1 {
+          font-size: 2rem; // Reducimos el tamaño del nombre para pantallas pequeñas
+          line-height: 1.2; // Ajustamos el interlineado para mejorar la legibilidad
+          margin-bottom: 0.3rem; // Reducimos el espacio entre 'Josue' y 'Garza'
+        }
+
+        .dev {
+          font-size: 1rem; // Reducimos el tamaño de fuente para 'FULL STACK DEVELOPER'
+          transform: none; // Eliminamos la rotación y el desplazamiento
+          position: static; // Restauramos la posición estática
+          margin-top: 0.5rem; // Ajustamos el margen superior
+          width: auto; // Dejamos que el ancho se ajuste al contenido
+          text-align: center; // Centramos el texto
+
+          b {
+            color: #a64ca6; // Mantenemos el color morado brillante para 'DEVELOPER'
+          }
+        }
+      }
+    }
+
+    .profile-img {
+      width: 90%; // Ajustamos el ancho de la imagen para que no ocupe el 100%
+      height: auto; // Aseguramos que la altura se ajuste automáticamente
+      margin: 0 auto; // Centramos la imagen horizontalmente
+      transform: translateY(0px); // Restablecemos la posición de la imagen
+    }
+  }
+}
